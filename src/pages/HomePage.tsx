@@ -233,11 +233,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDownload }) => {
                 lineHeight: 1.12,
               }}
             >
-              A Complete Islamic Solution, Launching 1 December 2026
+              Fiqah — Complete Islamic Solution App
             </h1>
 
             {/* Animated Countdown Timer: Days : Hours : Minutes : Seconds */}
-            <div className="mt-6">
+            <div id="countdown" className="mt-6">
+              <h2 className="sr-only">Release Countdown for December 1, 2026</h2>
               <CountdownTimer />
             </div>
 
@@ -265,13 +266,20 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDownload }) => {
           </div>
 
           {/* Right Column: Interactive 3D Quran Visualization */}
-          <div className="flex items-stretch lg:col-span-6">
+          <section
+            id="showcase"
+            aria-labelledby="showcase-heading"
+            className="flex flex-col items-stretch lg:col-span-6"
+          >
+            <h2 id="showcase-heading" className="sr-only">
+              Interactive 3D Showcase
+            </h2>
             <ThreeQuranCanvas
               variant="parchment"
               initialMode="mushaf"
               className="w-full"
             />
-          </div>
+          </section>
         </div>
       </section>
 
@@ -348,6 +356,52 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDownload }) => {
               </motion.div>
             );
           })}
+        </div>
+      </section>
+
+      <section
+        id="faq"
+        aria-labelledby="faq-heading"
+        className="mx-auto max-w-[1160px] px-4 py-12 sm:px-6 lg:px-8 lg:py-16"
+      >
+        <div className="mx-auto max-w-3xl">
+          <h2
+            id="faq-heading"
+            className="text-center text-3xl font-bold tracking-tight text-[#1A1A1A] sm:text-4xl"
+          >
+            Frequently Asked Questions
+          </h2>
+          <div className="mt-8 space-y-4">
+            <details className="rounded-[8px] border border-[#1B5E20]/20 bg-[#FFFFFF] p-5">
+              <summary className="cursor-pointer font-semibold text-[#1B5E20]">
+                When will the Fiqah app launch?
+              </summary>
+              <p className="mt-3 text-sm leading-relaxed text-[#4A554C]">
+                Fiqah is planned to launch on 1 December 2026. Official
+                download links will be shared when the app is available.
+              </p>
+            </details>
+            <details className="rounded-[8px] border border-[#1B5E20]/20 bg-[#FFFFFF] p-5">
+              <summary className="cursor-pointer font-semibold text-[#1B5E20]">
+                Which features are included in Fiqah?
+              </summary>
+              <p className="mt-3 text-sm leading-relaxed text-[#4A554C]">
+                The planned feature set includes prayer times, Qibla direction,
+                Quran reading, Hadith collections, Arabic, Urdu, and English
+                translations, and a Hijri calendar.
+              </p>
+            </details>
+            <details className="rounded-[8px] border border-[#1B5E20]/20 bg-[#FFFFFF] p-5">
+              <summary className="cursor-pointer font-semibold text-[#1B5E20]">
+                Where can I see the interactive 3D showcase?
+              </summary>
+              <p className="mt-3 text-sm leading-relaxed text-[#4A554C]">
+                The showcase is at the top of this page. Use its controls to
+                rotate the 3D scene and explore the Mushaf, Qibla astrolabe,
+                and Islamic geometry views.
+              </p>
+            </details>
+          </div>
         </div>
       </section>
 
