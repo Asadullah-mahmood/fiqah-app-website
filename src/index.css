@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1B5E20;
+  --color-primary-light: #2E7D32;
+  --color-primary-dark: #144718;
+  --color-background: #FFFFFF;
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #F7FAF7;
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #4A554C;
+
+  --font-clock: "Upper Clock", "Inter", ui-monospace, SFMono-Regular, monospace;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    font-family: "Inter", system-ui, -apple-system, sans-serif;
+  }
+
+  .font-clock {
+    font-family: "Upper Clock", "Inter", ui-monospace, SFMono-Regular, monospace;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid #1B5E20;
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Fiqah — Complete Islamic Solution App",
+  "description": "Official interactive 3D showcase and digital portal for the Fiqah App, a complete Islamic solution for Quran study, Salah timings, Qibla direction, and Fiqh guidance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
