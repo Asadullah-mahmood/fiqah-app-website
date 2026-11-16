@@ -28,13 +28,18 @@ export const Footer: React.FC = () => {
                 FAQ
               </a>
             </li>
+            <li>
+              <a href="/privacy" className="hover:underline">
+                Privacy Policy
+              </a>
+            </li>
           </ul>
         </nav>
         <div className="flex flex-col items-start justify-between gap-2 text-xs text-[#4A554C] sm:flex-row sm:items-center">
           <p>All rights are reserved by Fiqah {currentYear}.</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <a
-              href="https://rustinnovations.com/"
+              href="https://www.rustinnovations.com"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-[#1B5E20] hover:underline"
@@ -58,7 +63,7 @@ export const Footer: React.FC = () => {
               Share on X
             </a>
             <p className="font-medium text-[#1B5E20]">
-              Designed &amp; developed by Rust Innovations IT Department.
+              Designed &amp; developed by Rust Innovations.
             </p>
           </div>
         </div>

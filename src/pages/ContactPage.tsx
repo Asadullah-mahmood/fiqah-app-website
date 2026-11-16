@@ -60,9 +60,12 @@ export const ContactPage: React.FC = () => {
                   <p className="text-xs font-semibold text-[#4A554C]">
                     Support Email
                   </p>
-                  <p className="text-sm font-semibold text-[#1A1A1A]">
-                    support@fiqahapp.com
-                  </p>
+                  <a
+                    href="mailto:support@fiqah.rustinnovations.com"
+                    className="text-sm font-semibold text-[#1B5E20] hover:underline"
+                  >
+                    support@fiqah.rustinnovations.com
+                  </a>
                 </div>
               </div>
             </div>
@@ -75,7 +78,7 @@ export const ContactPage: React.FC = () => {
                     Engineering Division
                   </p>
                   <p className="text-sm font-semibold text-[#1A1A1A]">
-                    Rust Innovations IT Department
+                    Rust Innovations
                   </p>
                 </div>
               </div>

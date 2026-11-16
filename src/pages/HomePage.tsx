@@ -393,14 +393,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDownload }) => {
             </details>
             <details className="rounded-[8px] border border-[#1B5E20]/20 bg-[#FFFFFF] p-5">
               <summary className="cursor-pointer font-semibold text-[#1B5E20]">
-                Where can I see the interactive 3D showcase?
+                Is this app totally free?
               </summary>
               <p className="mt-3 text-sm leading-relaxed text-[#4A554C]">
-                The showcase is at the top of this page. Use its controls to
-                rotate the 3D scene and explore the Mushaf, Qibla astrolabe,
-                and Islamic geometry views.
+                Yes, the Fiqah App is totally free to use. You can use all features of this app without any cost. There are no in-app purchases or subscriptions.
               </p>
             </details>
+          
           </div>
         </div>
       </section>
