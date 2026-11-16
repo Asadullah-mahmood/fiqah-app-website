@@ -33,6 +33,11 @@ export const Footer: React.FC = () => {
                 Privacy Policy
               </a>
             </li>
+            <li>
+              <a href="/terms" className="hover:underline">
+                Terms &amp; Conditions
+              </a>
+            </li>
           </ul>
         </nav>
         <div className="flex flex-col items-start justify-between gap-2 text-xs text-[#4A554C] sm:flex-row sm:items-center">

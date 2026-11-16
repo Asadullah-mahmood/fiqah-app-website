@@ -1,9 +1,4 @@
 import React, { useEffect } from 'react';
-import { PageRoute } from '../types/fiqah';
-
-interface LegalPageProps {
-  onNavigate: (page: PageRoute) => void;
-}
 
 const PRIVACY_POLICY_URL = 'https://fiqah.rustinnovations.com/privacy';
 const PRIVACY_POLICY_TITLE =
@@ -444,7 +439,7 @@ export const DeleteAccountPage: React.FC = () => {
           Delete Account
         </h1>
         <p className="mt-4 text-sm leading-relaxed text-[#4A554C]">
-          Account deletion must be requested from within the Islamic Fiqh App.
+          Account deletion must be requested from within the Fiqah App.
           This website cannot delete your account.
         </p>
         <h2 className="font-display mt-6 text-xl font-bold text-[#1A1A1A]">
@@ -452,7 +447,7 @@ export const DeleteAccountPage: React.FC = () => {
         </h2>
         <ol className="mt-3 list-decimal space-y-3 pl-5 text-sm leading-relaxed text-[#4A554C]">
           <li>
-            Open the Islamic Fiqh App and sign in to the account you want to
+            Open the Fiqah App and sign in to the account you want to
             delete.
           </li>
           <li>Go to the Home screen and open Profile.</li>
@@ -472,74 +467,446 @@ export const DeleteAccountPage: React.FC = () => {
   );
 };
 
-export const TermsPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
+export const TermsPage: React.FC = () => {
   return (
     <main className="mx-auto max-w-[960px] bg-[#FFFFFF] px-4 py-10 sm:px-6 lg:px-8">
       <article className="rounded-[8px] border border-[#1B5E20]/20 bg-[#FFFFFF] p-6 sm:p-10">
-        <p className="text-xs font-semibold tracking-wide text-[#1B5E20]">
-          Legal &amp; Governance · Effective November 2026
+        <a
+          href="/"
+          className="text-sm font-semibold text-[#1B5E20] hover:underline"
+        >
+          ← Fiqah home
+        </a>
+        <p className="mt-8 text-xs font-semibold tracking-wide text-[#1B5E20]">
+          Effective Date: November 16, 2026
         </p>
         <h1 className="font-display mt-2 text-3xl font-bold text-[#1A1A1A] sm:text-4xl">
-          Terms &amp; Services
+          Terms &amp; Conditions
         </h1>
-        <p className="mt-3 text-sm leading-relaxed text-[#4A554C]">
-          By accessing the Fiqah website or installing the Fiqah mobile
-          application, you agree to the following Terms &amp; Conditions
-          established by Fiqah and the Rust Innovations IT Department.
-        </p>
+        <div className="mt-3 text-sm leading-relaxed text-[#4A554C]">
+          <p>
+            <strong>Application:</strong> Fiqah App
+          </p>
+          <p>
+            <strong>Developer:</strong> Rust Innovations IT Company
+          </p>
+          <p>
+            <strong>Effective Date:</strong> November 16, 2026
+          </p>
+        </div>
 
-        <div className="mt-8 space-y-6 divide-y divide-[#1B5E20]/15 text-sm leading-relaxed text-[#4A554C]">
-          <section className="pt-4 first:pt-0">
+        <nav
+          aria-label="Terms and conditions contents"
+          className="mt-7 rounded-[8px] bg-[#F7FAF7] p-5"
+        >
+          <h2 className="text-sm font-semibold text-[#1A1A1A]">In these terms</h2>
+          <ol className="mt-3 grid gap-2 text-sm text-[#1B5E20] sm:grid-cols-2">
+            {[
+              ['acceptance', 'Acceptance of Terms'],
+              ['purpose', 'Purpose of the Application'],
+              ['guidance', 'Islamic Information and Religious Guidance'],
+              ['accounts', 'User Accounts and Authentication'],
+              ['permissions', 'Location and Notification Permissions'],
+              ['acceptable-use', 'Acceptable Use'],
+              ['intellectual-property', 'Intellectual Property Rights'],
+              ['accuracy', 'Accuracy of Prayer Times and Calculations'],
+              ['third-party', 'Third-Party Services'],
+              ['availability', 'Application Availability and Updates'],
+              ['liability', 'Limitation of Liability'],
+              ['privacy', 'Privacy and Data Protection'],
+              ['termination', 'Account Suspension and Termination'],
+              ['changes', 'Changes to These Terms'],
+              ['governing-law', 'Governing Law'],
+              ['contact', 'Contact Information'],
+            ].map(([id, label], index) => (
+              <li key={id}>
+                <a className="hover:underline" href={`#${id}`}>
+                  {index + 1}. {label}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+
+        <div className="mt-8 space-y-8 divide-y divide-[#1B5E20]/15 text-sm leading-relaxed text-[#4A554C]">
+          <section id="acceptance" className="pt-6 first:pt-0">
             <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
-              1. Educational &amp; Worship Purpose
+              1. Acceptance of Terms
             </h2>
-            <p className="mt-2">
-              Fiqah provides Quranic scripts, verified translations, Salah
-              schedules, Qibla calibration, and foundational Fiqh references for
-              personal worship and study. For complex personal legal rulings
-              (Fatwa), users are encouraged to consult qualified local scholars.
+            <p className="mt-2 mb-6">
+              Welcome to Fiqah App, developed and operated by Rust Innovations
+              IT Company.
+            </p>
+            <p className="mt-2 mb-6">
+              By downloading, accessing, registering for, or using our
+              application, you acknowledge that you have read, understood, and
+              agreed to these Terms &amp; Conditions.
+            </p>
+            <p className="mt-2 mb-6">
+              If you do not agree with any part of these terms, please
+              discontinue using the application.
             </p>
           </section>
 
-          <section className="pt-6">
+          <section id="purpose" className="pt-6">
             <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
-              2. Intellectual Property &amp; Brand Marks
+              2. Purpose of the Application
             </h2>
-            <p className="mt-2">
-              The Fiqah name, emblem, application interface, 3D visual assets,
-              and original software architecture are protected works of Fiqah
-              and the Rust Innovations IT Department. Classical sacred texts
-              remain the shared heritage of the Ummah.
+            <p className="mt-2 mb-6">
+              Fiqah App is an Islamic educational and informational platform
+              designed to help Muslims access Islamic knowledge and religious
+              resources. Our services may include:
+            </p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>Quranic content and translations.</li>
+              <li>Hadith collections and references.</li>
+              <li>Islamic Fiqh information and guidance.</li>
+              <li>Hanafi and Jafari Fiqh resources.</li>
+              <li>Daily prayer times (Namaz timings).</li>
+              <li>Qibla direction.</li>
+              <li>Islamic calendars and important dates.</li>
+              <li>Duas, supplications, and Islamic reminders.</li>
+              <li>Zakat calculation tools.</li>
+              <li>Other Islamic educational features.</li>
+            </ul>
+            <p className="mt-2 mb-6">
+              The availability of individual features may change as the
+              application develops.
             </p>
           </section>
 
-          <section className="pt-6">
+          <section id="guidance" className="pt-6">
             <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
-              3. Astronomical &amp; Sensor Accuracy
+              3. Islamic Information and Religious Guidance
             </h2>
-            <p className="mt-2">
-              Qibla compass accuracy depends on device magnetometer calibration.
-              Users should periodically verify compass alignment away from
-              magnetic interference.
+            <p className="mt-2 mb-6">
+              Fiqah App aims to provide reliable Islamic educational
+              information based on recognized Islamic sources and scholarly
+              references. However:
+            </p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>
+                The application is intended for educational and informational
+                purposes.
+              </li>
+              <li>
+                Islamic rulings may differ between scholars, schools of
+                thought, and individual circumstances.
+              </li>
+              <li>
+                Users are encouraged to consult qualified Islamic scholars for
+                personal religious matters.
+              </li>
+              <li>
+                Calculators and automated tools provide estimates based on
+                selected rules and entered information.
+              </li>
+              <li>
+                Automated calculations and AI-generated explanations do not
+                replace qualified Islamic scholarship.
+              </li>
+            </ul>
+            <p className="mt-2 mb-6">
+              Users are responsible for evaluating information according to
+              their chosen school of thought and consulting appropriate
+              scholars when necessary.
             </p>
           </section>
 
-          <section className="pt-6">
+          <section id="accounts" className="pt-6">
             <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
-              4. Questions Regarding Terms
+              4. User Accounts and Authentication
             </h2>
-            <p className="mt-2">
-              Questions regarding these Terms &amp; Services may be directed to
-              our team via the{' '}
-              <button
-                type="button"
-                onClick={() => onNavigate('contact')}
+            <p className="mt-2 mb-6">
+              Certain application features may require users to create an
+              account or sign in through supported OAuth authentication
+              providers. By using account-based services, you agree to:
+            </p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>Provide accurate information when requested.</li>
+              <li>
+                Keep your account credentials and authentication methods secure.
+              </li>
+              <li>Avoid unauthorized access to other users’ accounts.</li>
+              <li>
+                Notify us if you suspect unauthorized use of your account.
+              </li>
+            </ul>
+            <p className="mt-2 mb-6">
+              We reserve the right to restrict access to accounts involved in
+              misuse, fraudulent activities, or violations of these terms.
+            </p>
+          </section>
+
+          <section id="permissions" className="pt-6">
+            <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
+              5. Location and Notification Permissions
+            </h2>
+            <p className="mt-2 mb-6">
+              Fiqah App may request device permissions to provide its services.
+              You can manage or revoke these permissions through your device
+              settings. Disabling them may affect related application
+              functionality.
+            </p>
+            <h3 className="mt-4 text-lg font-semibold text-[#1A1A1A]">
+              Location Permission
+            </h3>
+            <p className="mt-1 mb-6">
+              Location information may be used to calculate local prayer times,
+              determine relevant geographical settings, and provide
+              location-based Islamic features.
+            </p>
+            <h3 className="mt-4 text-lg font-semibold text-[#1A1A1A]">
+              Notification Permission
+            </h3>
+            <p className="mt-1 mb-6">
+              Notifications may be used for prayer reminders, Islamic events,
+              and other user-configured reminders.
+            </p>
+            <h3 className="mt-4 text-lg font-semibold text-[#1A1A1A]">
+              Background and Alarm Permissions
+            </h3>
+            <p className="mt-1 mb-6">
+              Relevant background execution and alarm permissions may be used
+              to deliver scheduled prayer alarms and reminders.
+            </p>
+          </section>
+
+          <section id="acceptable-use" className="pt-6">
+            <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
+              6. Acceptable Use
+            </h2>
+            <p className="mt-2 mb-6">
+              Users agree to use Fiqah App responsibly and only for lawful
+              purposes. You must not:
+            </p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>Attempt to hack, damage, or disrupt the application or services.</li>
+              <li>
+                Reverse engineer or exploit application systems unlawfully.
+              </li>
+              <li>
+                Use the application to distribute harmful, misleading, or
+                unlawful material.
+              </li>
+              <li>
+                Attempt unauthorized access to application databases or other
+                users’ information.
+              </li>
+              <li>Interfere with the normal operation of the application.</li>
+              <li>
+                Copy, redistribute, or commercially exploit protected
+                application content without permission.
+              </li>
+            </ul>
+          </section>
+
+          <section id="intellectual-property" className="pt-6">
+            <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
+              7. Intellectual Property Rights
+            </h2>
+            <p className="mt-2 mb-6">
+              Application branding, logos, designs, software, original content,
+              and other intellectual property owned by Rust Innovations IT
+              Company are protected by applicable intellectual property laws.
+            </p>
+            <p className="mt-2 mb-6">
+              Users may access and use the application for personal,
+              educational, and non-commercial purposes. You may not reproduce,
+              modify, distribute, or commercially exploit protected materials
+              without prior written permission.
+            </p>
+            <p className="mt-2 mb-6">
+              Third-party Islamic texts, translations, books, and resources may
+              remain subject to their respective copyright and licensing
+              conditions.
+            </p>
+          </section>
+
+          <section id="accuracy" className="pt-6">
+            <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
+              8. Accuracy of Prayer Times and Calculations
+            </h2>
+            <p className="mt-2 mb-6">
+              Prayer times may vary depending on geographical location,
+              calculation methods, time zones, and selected Islamic
+              jurisprudential settings. Users are responsible for selecting
+              appropriate calculation methods and Fiqh preferences.
+            </p>
+            <p className="mt-2 mb-6">
+              Zakat calculations and other financial or religious tools provide
+              informational estimates based on the selected methodology and
+              supplied information. Rust Innovations IT Company does not
+              guarantee that every automated calculation will apply to every
+              individual religious or financial circumstance.
+            </p>
+          </section>
+
+          <section id="third-party" className="pt-6">
+            <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
+              9. Third-Party Services
+            </h2>
+            <p className="mt-2 mb-6">
+              Fiqah App may integrate third-party services, including
+              authentication providers, mapping services, cloud infrastructure,
+              and other external technologies. These services may be subject to
+              their own terms, conditions, and privacy policies. Rust
+              Innovations IT Company is not responsible for the independent
+              operations, availability, or policies of third-party services.
+            </p>
+          </section>
+
+          <section id="availability" className="pt-6">
+            <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
+              10. Application Availability and Updates
+            </h2>
+            <p className="mt-2 mb-6">
+              We continuously work to improve Fiqah App and reserve the right
+              to:
+            </p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>Add, modify, or remove application features.</li>
+              <li>Release updates and improvements.</li>
+              <li>Temporarily suspend services for maintenance.</li>
+              <li>
+                Restrict access when necessary for security or technical
+                reasons.
+              </li>
+              <li>Discontinue services where reasonably necessary.</li>
+            </ul>
+            <p className="mt-2 mb-6">
+              We do not guarantee uninterrupted or error-free availability of
+              the application.
+            </p>
+          </section>
+
+          <section id="liability" className="pt-6">
+            <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
+              11. Limitation of Liability
+            </h2>
+            <p className="mt-2 mb-6">
+              To the extent permitted by applicable law, Rust Innovations IT
+              Company shall not be liable for:
+            </p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>Errors or inaccuracies in informational content.</li>
+              <li>Differences in Islamic interpretations or scholarly opinions.</li>
+              <li>Incorrect user-entered information.</li>
+              <li>
+                Prayer time discrepancies resulting from device settings or
+                calculation methods.
+              </li>
+              <li>
+                Estimated Zakat calculations that do not account for individual
+                circumstances.
+              </li>
+              <li>
+                Temporary service interruptions or third-party service
+                failures.
+              </li>
+              <li>Losses resulting from misuse of the application.</li>
+            </ul>
+            <p className="mt-2 mb-6">
+              Nothing in these terms excludes liability that cannot legally be
+              excluded under applicable law.
+            </p>
+          </section>
+
+          <section id="privacy" className="pt-6">
+            <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
+              12. Privacy and Data Protection
+            </h2>
+            <p className="mt-2 mb-6">
+              Your use of Fiqah App is also governed by our{' '}
+              <a
                 className="font-semibold text-[#1B5E20] underline underline-offset-2"
+                href="/privacy"
               >
-                Contact Page
-              </button>
-              .
+                Privacy Policy
+              </a>
+              , which explains how information is collected, processed, stored,
+              and protected. By using the application, you acknowledge that you
+              have had the opportunity to review it.
             </p>
+          </section>
+
+          <section id="termination" className="pt-6">
+            <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
+              13. Account Suspension and Termination
+            </h2>
+            <p className="mt-2 mb-6">
+              We reserve the right to suspend or restrict access to accounts
+              that violate these Terms &amp; Conditions or compromise
+              application security. Users may discontinue using the application
+              at any time. Account deletion and associated data requests are
+              handled according to our Privacy Policy and applicable data
+              protection requirements.
+            </p>
+          </section>
+
+          <section id="changes" className="pt-6">
+            <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
+              14. Changes to These Terms
+            </h2>
+            <p className="mt-2 mb-6">
+              Rust Innovations IT Company may update these Terms &amp;
+              Conditions to reflect changes in application functionality,
+              business operations, or legal requirements. Updated terms will be
+              published through the application or on our official website.
+              Continued use of the application after updated terms become
+              effective constitutes acceptance of the revised terms, to the
+              extent permitted by applicable law.
+            </p>
+          </section>
+
+          <section id="governing-law" className="pt-6">
+            <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
+              15. Governing Law
+            </h2>
+            <p className="mt-2 mb-6">
+              These Terms &amp; Conditions shall be governed by the applicable
+              laws of Pakistan, subject to any mandatory consumer protection
+              and data protection laws applicable to users in their respective
+              jurisdictions.
+            </p>
+          </section>
+
+          <section id="contact" className="pt-6">
+            <h2 className="font-display text-2xl font-bold text-[#1A1A1A]">
+              16. Contact Information
+            </h2>
+            <p className="mt-2 mb-6">
+              For questions, concerns, or inquiries regarding these Terms
+              &amp; Conditions, please contact us:
+            </p>
+            <ul className="mt-2 space-y-1">
+              <li>
+                <strong>Developer:</strong> Rust Innovations IT Company
+              </li>
+              <li>
+                <strong>Application:</strong> Fiqah App
+              </li>
+              <li>
+                <strong>Website:</strong>{' '}
+                <a
+                  className="font-semibold text-[#1B5E20] underline underline-offset-2"
+                  href="https://rustinnovations.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  https://rustinnovations.com
+                </a>
+              </li>
+              <li>
+                <strong>Email:</strong>{' '}
+                <a
+                  className="font-semibold text-[#1B5E20] underline underline-offset-2"
+                  href="mailto:support@fiqah.rustinnovations.com"
+                >
+                  support@fiqah.rustinnovations.com
+                </a>
+              </li>
+            </ul>
           </section>
         </div>
       </article>

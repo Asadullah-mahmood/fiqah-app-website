@@ -13,6 +13,7 @@ export default defineConfig(() => {
           main: path.resolve(__dirname, 'index.html'),
           privacy: path.resolve(__dirname, 'privacy/index.html'),
           deleteAccount: path.resolve(__dirname, 'delete-account/index.html'),
+          terms: path.resolve(__dirname, 'terms/index.html'),
         },
       },
     },

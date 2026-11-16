@@ -3,7 +3,11 @@ import { MotionConfig } from 'motion/react';
 import { DownloadModal } from './components/DownloadModal';
 import { Footer } from './components/Footer';
 import { HomePage } from './pages/HomePage';
-import { DeleteAccountPage, PrivacyPolicyPage } from './pages/LegalPages';
+import {
+  DeleteAccountPage,
+  PrivacyPolicyPage,
+  TermsPage,
+} from './pages/LegalPages';
 
 export default function App() {
   const [downloadOpen, setDownloadOpen] = useState(false);
@@ -13,6 +17,9 @@ export default function App() {
   const isDeleteAccountPage =
     window.location.pathname === '/delete-account' ||
     window.location.pathname === '/delete-account/';
+  const isTermsPage =
+    window.location.pathname === '/terms' ||
+    window.location.pathname === '/terms/';
 
   return (
     <MotionConfig reducedMotion="user">
@@ -20,6 +27,8 @@ export default function App() {
         <div className="flex-1">
           {isDeleteAccountPage ? (
             <DeleteAccountPage />
+          ) : isTermsPage ? (
+            <TermsPage />
           ) : isPrivacyPage ? (
             <PrivacyPolicyPage />
           ) : (
