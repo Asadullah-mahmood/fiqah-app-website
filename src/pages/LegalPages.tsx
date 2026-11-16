@@ -433,6 +433,45 @@ export const PrivacyPolicyPage: React.FC = () => {
   );
 };
 
+export const DeleteAccountPage: React.FC = () => {
+  return (
+    <main className="mx-auto max-w-[760px] bg-[#FFFFFF] px-4 py-10 sm:px-6 lg:px-8">
+      <article className="rounded-[8px] border border-[#1B5E20]/20 bg-[#FFFFFF] p-6 sm:p-10">
+        <p className="text-xs font-semibold tracking-wide text-[#1B5E20]">
+          Account Management
+        </p>
+        <h1 className="font-display mt-2 text-3xl font-bold text-[#1A1A1A] sm:text-4xl">
+          Delete Account
+        </h1>
+        <p className="mt-4 text-sm leading-relaxed text-[#4A554C]">
+          Account deletion must be requested from within the Islamic Fiqh App.
+          This website cannot delete your account.
+        </p>
+        <h2 className="font-display mt-6 text-xl font-bold text-[#1A1A1A]">
+          Steps to delete your account
+        </h2>
+        <ol className="mt-3 list-decimal space-y-3 pl-5 text-sm leading-relaxed text-[#4A554C]">
+          <li>
+            Open the Islamic Fiqh App and sign in to the account you want to
+            delete.
+          </li>
+          <li>Go to the Home screen and open Profile.</li>
+          <li>Tap Delete account.</li>
+          <li>
+            Review the notice and confirm that you want to permanently delete
+            your account.
+          </li>
+        </ol>
+        <p className="mt-6 rounded-[8px] border-l-4 border-[#1B5E20] bg-[#F7FAF7] p-4 text-sm leading-relaxed text-[#4A554C]">
+          After confirmation in the app, your account and associated data will
+          be deleted from our active servers immediately. This action cannot be
+          undone.
+        </p>
+      </article>
+    </main>
+  );
+};
+
 export const TermsPage: React.FC<LegalPageProps> = ({ onNavigate }) => {
   return (
     <main className="mx-auto max-w-[960px] bg-[#FFFFFF] px-4 py-10 sm:px-6 lg:px-8">
