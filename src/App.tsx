@@ -11,16 +11,17 @@ import {
 
 export default function App() {
   const [downloadOpen, setDownloadOpen] = useState(false);
+  const pathname =
+    typeof window === 'undefined' ? '/' : window.location.pathname;
   const isPrivacyPage =
-    window.location.pathname === '/privacy' ||
-    window.location.pathname === '/privacy/';
+    pathname === '/privacy' ||
+    pathname === '/privacy/';
   const isDeleteAccountPage =
-    window.location.pathname === '/delete-account' ||
-    window.location.pathname === '/delete-account/';
+    pathname === '/delete-account' ||
+    pathname === '/delete-account/';
   const isTermsPage =
-    window.location.pathname === '/terms' ||
-    window.location.pathname === '/terms/';
-
+    pathname === '/terms' ||
+    pathname === '/terms/';
   return (
     <MotionConfig reducedMotion="user">
       <div className="min-h-screen flex flex-col bg-[#FFFFFF] text-[#1A1A1A]">

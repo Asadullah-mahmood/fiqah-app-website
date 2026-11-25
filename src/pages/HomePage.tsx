@@ -253,6 +253,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDownload }) => {
               </p>
             </div>
 
+            <nav aria-label="Fiqah page sections" className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-[#1B5E20]">
+              <a href="#features" className="hover:underline">Core Features</a>
+              <a href="#showcase" className="hover:underline">Interactive 3D Showcase</a>
+              <a href="#countdown" className="hover:underline">Release Countdown</a>
+              <a href="#faq" className="hover:underline">FAQ</a>
+            </nav>
+
             <div className="mt-6">
               <button
                 type="button"
@@ -303,7 +310,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDownload }) => {
             id="features-heading"
             className="mt-2 text-3xl font-bold tracking-tight text-[#1A1A1A] text-balance sm:text-4xl"
           >
-            Features
+            Core Features
           </h2>
           <p className="mt-3 text-sm leading-relaxed text-[#4A554C] sm:text-base">
             Thoughtfully crafted tools for daily worship, scripture study, and
@@ -374,7 +381,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDownload }) => {
           <div className="mt-8 space-y-4">
             <details className="rounded-[8px] border border-[#1B5E20]/20 bg-[#FFFFFF] p-5">
               <summary className="cursor-pointer font-semibold text-[#1B5E20]">
-                When will the Fiqah app launch?
+                <h3 className="inline font-semibold">When will the Fiqah app launch?</h3>
               </summary>
               <p className="mt-3 text-sm leading-relaxed text-[#4A554C]">
                 Fiqah is planned to launch on 1 December 2026. Official
@@ -383,7 +390,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDownload }) => {
             </details>
             <details className="rounded-[8px] border border-[#1B5E20]/20 bg-[#FFFFFF] p-5">
               <summary className="cursor-pointer font-semibold text-[#1B5E20]">
-                Which features are included in Fiqah?
+                <h3 className="inline font-semibold">Which features are included in Fiqah?</h3>
               </summary>
               <p className="mt-3 text-sm leading-relaxed text-[#4A554C]">
                 The planned feature set includes prayer times, Qibla direction,
@@ -393,7 +400,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenDownload }) => {
             </details>
             <details className="rounded-[8px] border border-[#1B5E20]/20 bg-[#FFFFFF] p-5">
               <summary className="cursor-pointer font-semibold text-[#1B5E20]">
-                Is this app totally free?
+                <h3 className="inline font-semibold">Is this app totally free?</h3>
               </summary>
               <p className="mt-3 text-sm leading-relaxed text-[#4A554C]">
                 Yes, the Fiqah App is totally free to use. You can use all features of this app without any cost. There are no in-app purchases or subscriptions.

@@ -44,12 +44,20 @@ export const Footer: React.FC = () => {
           <p>All rights are reserved by Fiqah {currentYear}.</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <a
-              href="https://www.rustinnovations.com"
+              href="https://rustinnovations.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-[#1B5E20] hover:underline"
             >
               Rust Innovations
+            </a>
+            <a
+              href="https://wa.me/?text=Fiqah%20%E2%80%94%20Complete%20Islamic%20Solution%20App%3A%20https%3A%2F%2Ffiqah.rustinnovations.com%2F"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-[#1B5E20] hover:underline"
+            >
+              Share on WhatsApp
             </a>
             <a
               href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffiqah.rustinnovations.com%2F"
@@ -67,6 +75,15 @@ export const Footer: React.FC = () => {
             >
               Share on X
             </a>
+            <button
+              type="button"
+              onClick={() => {
+                void navigator.clipboard?.writeText('https://fiqah.rustinnovations.com/');
+              }}
+              className="cursor-pointer font-medium text-[#1B5E20] hover:underline"
+            >
+              Copy Link
+            </button>
             <p className="font-medium text-[#1B5E20]">
               Designed &amp; developed by Rust Innovations.
             </p>

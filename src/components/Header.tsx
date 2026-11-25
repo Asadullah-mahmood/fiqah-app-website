@@ -78,10 +78,10 @@ export const Header: React.FC<HeaderProps> = ({
 
           {/* Center Zone: Centred Logo */}
           <div className="flex justify-center">
-            <button
-              type="button"
-              onClick={() => handleNav('home')}
+            <a
+              href="https://fiqah.rustinnovations.com/"
               className="inline-flex items-center gap-2.5 rounded-[8px] px-2 py-1 text-left transition-opacity hover:opacity-90 whitespace-nowrap shrink-0"
+              aria-label="Fiqah homepage"
             >
               <img
                 src="/assets/aistudio/Fiqha_app_logo_9e45ea1f.jpg"
@@ -92,7 +92,7 @@ export const Header: React.FC<HeaderProps> = ({
               <span className="font-display text-2xl font-bold tracking-tight text-[#1B5E20]">
                 Fiqah
               </span>
-            </button>
+            </a>
           </div>
 
           {/* Right Zone: Explore Us + Download App */}

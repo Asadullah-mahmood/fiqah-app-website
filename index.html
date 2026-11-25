@@ -10,6 +10,7 @@
       name="description"
       content="Official interactive 3D showcase and release countdown for the Fiqah App, a complete Islamic solution launching 1 December 2026."
     />
+    <meta property="og:site_name" content="Fiqah" />
     <meta property="og:title" content="Fiqah — Complete Islamic Solution App" />
     <meta
       property="og:description"
@@ -35,19 +36,29 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "MobileApplication",
-        "name": "Fiqah",
-        "description": "A complete Islamic solution app with prayer times, Quran, Hadith, translations, and an Islamic calendar.",
-        "applicationCategory": "LifestyleApplication",
-        "operatingSystem": "Android, iOS",
-        "releaseDate": "2026-12-01",
-        "url": "https://fiqah.rustinnovations.com/",
-        "image": "https://fiqah.rustinnovations.com/assets/aistudio/Fiqha_app_logo_9e45ea1f.jpg",
-        "developer": {
-          "@type": "Organization",
-          "name": "Rust Innovations",
-          "url": "https://www.rustinnovations.com"
-        }
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Fiqah",
+            "alternateName": ["Fiqah App", "Fiqah by Rust Innovations"],
+            "url": "https://fiqah.rustinnovations.com/"
+          },
+          {
+            "@type": "MobileApplication",
+            "name": "Fiqah",
+            "description": "A complete Islamic solution app with prayer times, Quran, Hadith, translations, and an Islamic calendar.",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "Android, iOS",
+            "releaseDate": "2026-12-01",
+            "url": "https://fiqah.rustinnovations.com/",
+            "image": "https://fiqah.rustinnovations.com/assets/aistudio/Fiqha_app_logo_9e45ea1f.jpg",
+            "developer": {
+              "@type": "Organization",
+              "name": "Rust Innovations",
+              "url": "https://www.rustinnovations.com"
+            }
+          }
+        ]
       }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,93 +70,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <noscript>
-      <main>
-        <h1>Fiqah — Complete Islamic Solution App</h1>
-        <p>
-          Fiqah is a complete Islamic solution app created to bring essential
-          tools for worship, learning, and everyday planning together in one
-          calm mobile experience. The app is designed by Rust Innovations for
-          people who want practical access to prayer information and trusted
-          Islamic resources without switching between disconnected services.
-          Fiqah is scheduled to launch on 1 December 2026.
-        </p>
-        <nav aria-label="Page sections">
-          <a href="#features">Core Features</a>
-          <a href="#showcase">Interactive 3D Showcase</a>
-          <a href="#countdown">Release Countdown</a>
-          <a href="#faq">Frequently Asked Questions</a>
-        </nav>
-        <section id="features">
-          <h2>Core Features</h2>
-          <h3>Prayer times and Qibla direction</h3>
-          <p>
-            Namaz Time provides daily prayer schedules based on location and
-            supports established calculation methods. Adhan reminders help
-            users keep their routine, while the Qibla direction tool helps
-            them orient themselves for prayer. Ramadan planning includes
-            Suhoor and Iftar countdowns.
-          </p>
-          <h3>Quran, Hadith, and translations</h3>
-          <p>
-            The Quran reader offers Uthmani and Indo-Pak scripts, Surah and
-            Juz navigation, adjustable text, bookmarks, and last-read tracking.
-            Fiqah also brings together well-known Hadith collections with
-            search and topic browsing. Arabic scripture can be read alongside
-            Urdu and English translations to support study and understanding.
-          </p>
-          <h3>Islamic calendar and daily planning</h3>
-          <p>
-            A Hijri and Gregorian calendar highlights important Islamic dates
-            and supports planning around Ramadan, Eid, and fasting days. The
-            app is designed for a clear, ad-free experience, with core reading
-            resources intended to remain useful when a network connection is
-            unavailable.
-          </p>
-        </section>
-        <section id="showcase">
-          <h2>Interactive 3D Showcase</h2>
-          <p>
-            Explore an interactive 3D presentation inspired by the Mushaf,
-            Qibla navigation, and Islamic geometry. Visitors can rotate the
-            scene and explore its visual modes. The showcase introduces the
-            design language of the Fiqah app while the feature descriptions
-            explain the practical tools being prepared for mobile.
-          </p>
-        </section>
-        <section id="countdown">
-          <h2>Release Countdown for December 1, 2026</h2>
-          <p>
-            Fiqah is planned for release on 1 December 2026 for Android and iOS.
-            The countdown marks the planned launch date; official store links
-            will be shared when they are available. Follow the project updates
-            for release information from Rust Innovations.
-          </p>
-        </section>
-        <section id="faq">
-          <h2>Frequently Asked Questions</h2>
-          <h3>When will Fiqah launch?</h3>
-          <p>The planned release date is 1 December 2026.</p>
-          <h3>Which platforms are planned?</h3>
-          <p>The app is being prepared for Android and iOS devices.</p>
-          <h3>What can I explore on this website?</h3>
-          <p>
-            You can read about Fiqah's prayer tools, Quran reader, Hadith
-            collections, language support, and Islamic calendar, and explore
-            the interactive 3D showcase.
-          </p>
-        </section>
-        <footer>
-          <p>
-            Fiqah is developed by Rust Innovations. Visit
-            <a href="https://rustinnovations.com/" rel="noopener noreferrer">
-              Rust Innovations
-            </a>
-            for more information.
-          </p>
-        </footer>
-      </main>
-    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

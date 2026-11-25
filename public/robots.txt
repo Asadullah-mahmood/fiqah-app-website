@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fiqah.rustinnovations.com/sitemap.xml
